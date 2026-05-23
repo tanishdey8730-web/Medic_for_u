@@ -1,71 +1,34 @@
-🩺 Medical Chatbot
-An AI-powered Medical Chatbot designed to provide basic healthcare assistance through intelligent conversations. The chatbot can understand user symptoms, answer health-related queries, and provide preliminary guidance using Natural Language Processing and Machine Learning techniques.
-🚀 Features
+# MediAI — Intelligent Health Assistant
 
+AI-powered symptom analysis with **prescriptions**, **medicine images**, **Wikipedia web research**, and **emergency detection**.
 
-🤖 AI-based conversational interface
+## Features
 
+- Symptom analysis via chat or quick symptom chips
+- Disease probability ranking with treatment plans
+- **Prescription generation** with medicine names, dosages, and images
+- **Internet research** (Wikipedia summaries for matched conditions)
+- **Emergency alerts** for critical symptoms (chest pain, stroke signs, etc.)
+- Prescription history tab with download
+- Appointments and nearby hospitals (Kolkata demo data)
 
-🩺 Symptom-based health suggestions
+## Run
 
+```bash
+npm install
+npm start
+```
 
-💬 Real-time chat interaction
+Open **http://localhost:3001** in your browser (default port; set `PORT` env to change).
 
+## API
 
-🧠 NLP-powered response generation
+| Endpoint | Method | Description |
+|----------|--------|-------------|
+| `/api/health` | GET | Server status |
+| `/api/analyze` | POST | `{ "text": "...", "symptoms": [] }` — full analysis |
+| `/api/prescriptions` | GET | Recent prescriptions from session |
 
+## Disclaimer
 
-📚 Medical knowledge integration
-
-
-🔍 User-friendly and responsive UI
-
-
-⚡ Fast and lightweight performance
-
-
-🛠️ Technologies Used
-
-
-Python
-
-
-Machine Learning
-
-
-Natural Language Processing (NLP)
-
-
-Flask / Django
-
-
-HTML, CSS, JavaScript
-
-
-React (if used)
-
-
-TensorFlow / Scikit-learn
-
-
-📌 Purpose
-This project aims to simplify preliminary healthcare support by enabling users to interact with an intelligent chatbot capable of understanding medical-related questions and providing informative responses.
-📷 Project Highlights
-
-
-Interactive healthcare assistant
-
-
-Easy-to-use chatbot interface
-
-
-Intelligent symptom analysis
-
-
-Beginner-friendly AI healthcare project
-
-
-⚠️ Disclaimer
-This chatbot is developed for educational and informational purposes only and should not be considered a replacement for professional medical advice, diagnosis, or treatment.
-👨‍💻 Author
-Developed by Shantanu Dey
+This app provides **educational AI guidance only**. It is not a substitute for licensed medical care. Always consult a doctor before taking medication. Call **112** or **108** in emergencies.
