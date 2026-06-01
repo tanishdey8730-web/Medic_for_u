@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 {
   "name": "mediai-medic",
   "version": "2.0.0",
@@ -16,22 +15,3 @@
     "express": "^4.21.2"
   }
 }
-=======
-{
-  "name": "mediai-medic",
-  "version": "2.0.0",
-  "description": "MediAI health assistant with prescription and web-informed diagnosis",
-  "main": "server/index.js",
-  "scripts": {
-    "start": "node server/index.js",
-    "dev": "node server/index.js"
-  },
-  "engines": {
-    "node": ">=18"
-  },
-  "dependencies": {
-    "cors": "^2.8.5",
-    "express": "^4.21.2"
-  }
-}
->>>>>>> ae4205e7890492c593d1f69b0a41eb71b66a9220

@@ -240,7 +240,6 @@ body{font-family:'Sora',sans-serif;background:var(--bg);color:var(--text);min-he
 .emergency-modal{background:linear-gradient(180deg,#1a0a0a,#2d1515);border:2px solid var(--danger);border-radius:var(--r2);padding:28px;max-width:420px;width:100%;text-align:center;animation:fadeUp .3s ease}
 .emergency-modal h2{color:var(--danger);font-size:22px;margin-bottom:12px}
 .emergency-modal .big-pulse{width:60px;height:60px;background:var(--danger);border-radius:50%;margin:0 auto 16px;animation:pulse 1s infinite}
-<<<<<<< HEAD
 
 /* LAB REPORT ANALYZER */
 .reports-view{flex:1;padding:24px;overflow-y:auto}
@@ -502,9 +501,6 @@ body{font-family:'Sora',sans-serif;background:var(--bg);color:var(--text);min-he
 .fitness-water-btns button{padding:4px 10px;font-size:11px;border-radius:6px;border:1px solid var(--border);background:var(--card2);color:var(--accent);cursor:pointer}
 </style>
 <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
-=======
-</style>
->>>>>>> ae4205e7890492c593d1f69b0a41eb71b66a9220
 </head>
 <body>
 <div class="app">
@@ -515,7 +511,6 @@ body{font-family:'Sora',sans-serif;background:var(--bg);color:var(--text);min-he
       <div class="logo-text">Medi<span>AI</span></div>
     </div>
     <div class="nav-tabs">
-<<<<<<< HEAD
       <button class="nav-tab active" onclick="switchTab('dashboard')">📈 Dashboard</button>
       <button class="nav-tab" onclick="switchTab('chat')">💬 Diagnosis</button>
       <button class="nav-tab" onclick="switchTab('voice')">🎙️ Voice</button>
@@ -527,11 +522,6 @@ body{font-family:'Sora',sans-serif;background:var(--bg);color:var(--text);min-he
       <button class="nav-tab" onclick="switchTab('reports')">📊 Labs</button>
       <button class="nav-tab" onclick="switchTab('prescriptions')">💊 Rx</button>
       <button class="nav-tab" onclick="switchTab('appointments')">📅 Appts</button>
-=======
-      <button class="nav-tab active" onclick="switchTab('chat')">💬 Diagnosis</button>
-      <button class="nav-tab" onclick="switchTab('prescriptions')">💊 Prescriptions</button>
-      <button class="nav-tab" onclick="switchTab('appointments')">📅 Appointments</button>
->>>>>>> ae4205e7890492c593d1f69b0a41eb71b66a9220
       <button class="nav-tab" onclick="switchTab('hospitals')">🏥 Hospitals</button>
     </div>
     <div id="apiStatus" class="api-status">⚡ Connecting...</div>
@@ -539,7 +529,6 @@ body{font-family:'Sora',sans-serif;background:var(--bg);color:var(--text);min-he
 
   <!-- MAIN -->
   <div class="main">
-<<<<<<< HEAD
     <!-- DASHBOARD VIEW -->
     <div class="content" id="dashboardView" style="display:flex;flex-direction:column">
       <div class="dashboard-view">
@@ -851,10 +840,6 @@ body{font-family:'Sora',sans-serif;background:var(--bg);color:var(--text);min-he
 
     <!-- SIDEBAR -->
     <div class="sidebar" id="sidebar" style="display:none">
-=======
-    <!-- SIDEBAR -->
-    <div class="sidebar" id="sidebar">
->>>>>>> ae4205e7890492c593d1f69b0a41eb71b66a9220
       <div class="sidebar-section">
         <h4>Quick Symptoms</h4>
         <div class="quick-symptom" id="quickSymptoms">
@@ -887,11 +872,7 @@ body{font-family:'Sora',sans-serif;background:var(--bg);color:var(--text);min-he
     </div>
 
     <!-- CHAT VIEW -->
-<<<<<<< HEAD
     <div class="content" id="chatView" style="display:none">
-=======
-    <div class="content" id="chatView">
->>>>>>> ae4205e7890492c593d1f69b0a41eb71b66a9220
       <div class="chat-messages" id="chatMessages">
         <div class="message bot">
           <div class="msg-avatar">🤖</div>
@@ -984,7 +965,6 @@ body{font-family:'Sora',sans-serif;background:var(--bg);color:var(--text);min-he
       </div>
     </div>
 
-<<<<<<< HEAD
     <!-- VOICE AI DOCTOR VIEW -->
     <div class="content" id="voiceView" style="display:none;padding:0">
       <div class="voice-view" id="voiceViewRoot">
@@ -1058,8 +1038,6 @@ body{font-family:'Sora',sans-serif;background:var(--bg);color:var(--text);min-he
       </div>
     </div>
 
-=======
->>>>>>> ae4205e7890492c593d1f69b0a41eb71b66a9220
     <!-- PRESCRIPTIONS VIEW -->
     <div class="content" id="prescriptionsView" style="display:none">
       <div class="prescriptions-view">
@@ -1292,7 +1270,6 @@ function filterHospitals(q){
 
 // --- TAB SWITCHING ---
 function switchTab(tab){
-<<<<<<< HEAD
   ['dashboardView','chatView','voiceView','riskView','dietView','fitnessView','interactionsView','scannerView','reportsView','prescriptionsView','appointmentsView','hospitalsView'].forEach(id=>{
     const el=document.getElementById(id);
     if(el) el.style.display='none';
@@ -1316,17 +1293,6 @@ function switchTab(tab){
   const tabs=['dashboard','chat','voice','risk','diet','fitness','interactions','scanner','reports','prescriptions','appointments','hospitals'];
   document.querySelectorAll('.nav-tab').forEach((t,i)=>{
     t.classList.toggle('active',tabs[i]===tab);
-=======
-  ['chatView','prescriptionsView','appointmentsView','hospitalsView'].forEach(id=>{
-    document.getElementById(id).style.display='none';
-  });
-  document.getElementById('sidebar').style.display=tab==='chat'?'flex':'none';
-  const map={chat:'chatView',prescriptions:'prescriptionsView',appointments:'appointmentsView',hospitals:'hospitalsView'};
-  if(map[tab]) document.getElementById(map[tab]).style.display='flex';
-  if(tab==='prescriptions') renderPrescriptionHistory();
-  document.querySelectorAll('.nav-tab').forEach((t,i)=>{
-    t.classList.toggle('active',['chat','prescriptions','appointments','hospitals'][i]===tab);
->>>>>>> ae4205e7890492c593d1f69b0a41eb71b66a9220
   });
 }
 
@@ -1956,10 +1922,7 @@ async function bookAppointment(){
   await syncAppointmentToServer(appt);
 
   renderAppointments();
-<<<<<<< HEAD
   if(typeof refreshHealthDashboard==='function') refreshHealthDashboard();
-=======
->>>>>>> ae4205e7890492c593d1f69b0a41eb71b66a9220
   showToast(`✅ Appointment booked for ${name}!`);
 
   document.getElementById('apptName').value='';
@@ -1995,7 +1958,6 @@ async function fetchAppointmentsFromServer(){
   }catch{}
 }
 
-<<<<<<< HEAD
 // --- LAB REPORT ANALYZER ---
 const REPORT_STORAGE_KEY='mediai_lab_reports';
 let selectedReportType='auto';
@@ -3674,8 +3636,6 @@ function checkNewMilestones(data){
 
 seedFitnessIfEmpty();
 
-=======
->>>>>>> ae4205e7890492c593d1f69b0a41eb71b66a9220
 // --- TOAST ---
 let toastTimer;
 function showToast(msg){
@@ -3692,11 +3652,8 @@ apptDateEl.min=new Date().toISOString().split('T')[0];
 apptDateEl.valueAsDate=new Date(Date.now()+86400000*3);
 renderAppointments();
 fetchAppointmentsFromServer().then(renderAppointments);
-<<<<<<< HEAD
 refreshHealthDashboard();
 applyFitnessGoalsToForm(loadFitnessGoals());
-=======
->>>>>>> ae4205e7890492c593d1f69b0a41eb71b66a9220
 </script>
 </body>
 </html>
