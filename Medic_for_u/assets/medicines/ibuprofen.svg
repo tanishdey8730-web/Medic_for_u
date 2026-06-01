@@ -1,8 +1,0 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 200" role="img" aria-label="Ibuprofen">
-  <rect width="320" height="200" fill="#0f172a"/>
-  <rect x="95" y="55" width="130" height="70" rx="14" fill="#0099ff"/>
-  <rect x="108" y="68" width="104" height="44" rx="8" fill="#38bdf8" opacity=".5"/>
-  <circle cx="130" cy="90" r="8" fill="#e0f2fe"/><circle cx="160" cy="90" r="8" fill="#e0f2fe"/><circle cx="190" cy="90" r="8" fill="#e0f2fe"/>
-  <text x="160" y="168" text-anchor="middle" fill="#e2e8f0" font-family="Arial,sans-serif" font-size="18" font-weight="700">Ibuprofen</text>
-  <text x="160" y="28" text-anchor="middle" fill="#94a3b8" font-family="Arial,sans-serif" font-size="12">200mg Tablets</text>
-</svg>
